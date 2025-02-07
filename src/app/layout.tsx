@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
@@ -14,7 +15,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="h-screen bg-cover bg-center" style={{ backgroundImage: "url('/background.jpg')" }}>{children}</body>
+      <body className="h-screen bg-cover bg-center" style={{ backgroundImage: "url('/background.jpg')" }}>
+        <Navbar/>
+        {children}
+      </body>
     </html>
   );
 }

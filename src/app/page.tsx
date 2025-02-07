@@ -2,13 +2,8 @@ import AnimatedText from "@/components/text";
 
 export default async function Home() {
   return (
-    <div>
-    <div className="flex text-5xl italic w-screen h-screen items-center justify-center">
-      {/* <p className="text-center">
-        [{' '}Capture The Rewind{' '}]
-      </p> */}
+    <div className="flex text-5xl italic w-[1300px] h-[300px] items-center justify-center m-auto mt-[10%]">
         <AnimatedText text="Capture The Rewind" preStyle='cursor-pointer'/>
-    </div>
     </div>
   );
 }
