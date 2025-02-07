@@ -6,12 +6,11 @@ const Navbar = () => {
   return (
     <div className='flex justify-between px-10 py-5 items-center'>
         <div className="logo flex items-center">
-            
-            <p className="text-3xl">Android Club</p>
+            <AnimatedText text='Android Club' className='text-3xl' preStyle='text-3xl'/>
         </div>
         <div className="sign">
-            <button className='bg-[#11f800] text-black text-xl px-5 py-3'>
-                <AnimatedText text="Sign in" className = 'text-black' preStyle='text-black'/>
+            <button className=''>
+                <AnimatedText text="Sign in" className = 'bg-[#11f800] hover:bg-[#3ade2e] transition-all text-black text-xl px-5 py-3' preStyle='bg-[#11f800] hover:bg-[#3ade2e] transition-all text-black text-xl px-5 py-3'/>
             </button>
         </div>
     </div>
