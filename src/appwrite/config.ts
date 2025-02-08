@@ -1,5 +1,5 @@
 import config from "@/config/appwriteConfig";
-import { Client, Account, Databases } from "node-appwrite";
+import { Client, Account, Databases } from "appwrite";
 
 
 type LoginUserAccount = {
@@ -26,7 +26,6 @@ interface UpdateProgressResult {
 const appwriteClient = new Client()
   .setEndpoint(config.appwriteUrl)
   .setProject(config.appwriteProjectId)
-  .setKey(config.appwriteApiKey);
 export const account = new Account(appwriteClient);
 export const databases = new Databases(appwriteClient);
 

@@ -1,4 +1,5 @@
 'use client';
+import CustomInput from '@/components/CustomInput';
 import LetterAnimation from '@/components/LetterAnimation'
 import AnimatedText from '@/components/text'
 import React, { useState } from 'react'
@@ -43,8 +44,8 @@ const page = () => {
         </div>
         <div >
           <form action="" className='flex gap-2 items-center mt-20 mx-auto' onSubmit={handleSubmit}>
-            <input type="text" value={input} className='ml-64 bg-opacity-15 bg-[#11f800] rounded-none border-4 border-[#11f800] text-3xl outline-none focus:ring-0 uppercase focus:border-[#11f800] px-4 py-2' onChange={handleChange}/>
-            <button className=''>
+            <CustomInput input={input} handleChange={handleChange} className='uppercase'/>
+            <button type='submit' className=''>
                 <AnimatedText text="Submit" className = 'bg-[#11f800] transition-all text-black text-xl px-5 py-5' preStyle='bg-[#11f800] transition-all text-black  text-xl px-5 py-5'/>
             </button>
           </form>
