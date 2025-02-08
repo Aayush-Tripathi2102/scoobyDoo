@@ -4,11 +4,14 @@ import CustomInput from '@/components/CustomInput'
 import AnimatedText from '@/components/text'
 import React, { useState } from 'react'
 import { account } from '@/appwrite/config';
+import { useRouter } from 'next/navigation';
 
 const page = () => {
+    const router = useRouter()
     const [inputName, setInputName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputName(e.target.value);
     };
@@ -20,13 +23,12 @@ const page = () => {
     };
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(inputName)
-        console.log(email)
-        console.log(password)
-        
         const a = await appwriteService.login({email, password})
-        console.log("login", a);
-        const user = await account.get(); 
+        const user = await account.get();
+        if(user){
+            setIsLoggedIn(true)
+            window.location.href = "/";
+        }
         console.log(user)
     };
     

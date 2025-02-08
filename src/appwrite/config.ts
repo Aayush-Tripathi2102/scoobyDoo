@@ -38,9 +38,10 @@ export class AppwriteService {
       return await account.createEmailPasswordSession(email, password);
     } catch (error) {
       console.log(error);
+      return null;  // Ensure failure is handled
     }
-
   }
+  
 
   async isLoggedIn(): Promise<boolean> {
     try {
@@ -48,16 +49,19 @@ export class AppwriteService {
       return Boolean(data);
     } catch (error) {
       console.log(error);
+      return false;  // Ensure it returns false on error
     }
-    return false;
   }
+  
   async getCurrentUser() {
     try {
       return await account.get();
     } catch (error) {
       console.log("getCurrentUser error", error);
+      return null;  // Ensure it returns null on error
     }
   }
+  
 
   async logout() {
     try {
