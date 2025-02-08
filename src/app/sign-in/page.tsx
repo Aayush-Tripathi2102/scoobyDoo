@@ -44,6 +44,7 @@ const page = () => {
                     <button type='submit' className='mt-10 ml-[430px]'>
                         <AnimatedText text="Submit" className = 'bg-[#11f800] transition-all  text-black text-xl px-20 py-5' preStyle='bg-[#11f800] transition-all text-black  text-xl px-20 py-5'/>
                     </button>
+                    
                 </form>              
             </div>
         </div>
