@@ -13,7 +13,7 @@ const Navbar = () => {
       const b = await appwriteService.isLoggedIn()
       setIsLogIn(b)
     }
-    checkLogin()
+    void checkLogin()
   }, [])
 
   const handleClick = () => {

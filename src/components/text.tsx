@@ -1,5 +1,5 @@
-'use client';
-import React, { useState, useRef, useEffect } from 'react';
+"use client";
+import React, { useState, useRef } from "react";
 
 interface AnimatedTextProps {
   text: string;
@@ -12,17 +12,17 @@ interface AnimatedTextProps {
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
   text,
-  className = '',
-  customText = '',
+  className = "",
+  customText = "",
   time = 1,
-  preStyle = '',
+  preStyle = "",
 }) => {
-  const [animatedTitle, setAnimatedTitle] = useState<string>(text || '');
+  const [animatedTitle, setAnimatedTitle] = useState<string>(text || "");
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const finalClass = isHovered ? preStyle || className : className;
-  const letters = customText === '' ? '!@#$%^&*()_' : customText;
+  const letters = customText === "" ? "!@#$%^&*()_" : customText;
 
   const handleMouseOver = () => {
     let iteration = 0;
@@ -31,13 +31,13 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     function animateText() {
       intervalRef.current = setInterval(() => {
         const randomText = text
-          .split('')
+          .split("")
           .map((char, index) =>
             index < iteration
               ? char
-              : letters[Math.floor(Math.random() * letters.length)]
+              : letters[Math.floor(Math.random() * letters.length)],
           )
-          .join('');
+          .join("");
 
         setAnimatedTitle(randomText);
         iteration += 0.5 / time;
@@ -61,7 +61,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   return (
     <div className="z-50">
       <p
-        className={`${finalClass} inline z-50`}
+        className={`${finalClass} z-50 inline`}
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
       >
