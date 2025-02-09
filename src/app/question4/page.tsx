@@ -1,13 +1,13 @@
 "use client";
-import appwriteService from "@/appwrite/config";
 import CustomInput from "@/components/CustomInput";
 import LetterAnimation from "@/components/LetterAnimation";
 import AnimatedText from "@/components/text";
-import { checkCorrect } from "@/utils/checkCorrect";
 import React, { useState } from "react";
+import { checkCorrect } from "@/utils/checkCorrect";
+import appwriteService from "@/appwrite/config";
 
 const Page = () => {
-  const questionId = "q1";
+  const questionId = "q4";
   const [input, setInput] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,13 +38,10 @@ const Page = () => {
       </div>
       <div>
         <LetterAnimation>
-          Deserts, Dynasties, Power and Prophecy- the second act unfolded in
-          2024. In this tale where sands hold secrets and the future whispers in
-          fragments, a pivotal moment folds back upon itself. Hidden under the
-          sand, an important date (ddmmyy) murmurs its truth in reverse. But
-          only when seen through the lens of a dual world can its essence be
-          fully grasped- think in terms of light and shadow, presence and
-          absence.
+          Where flames ignite and nations unite, the world’s grand stage awaits.
+          Seek the city’s grand portrait on the official site—where a tower
+          stands tall and a number marks its legacy. Let that number lead you to
+          the nation that stood in its place when the world was keeping score.
         </LetterAnimation>
       </div>
       <div>
