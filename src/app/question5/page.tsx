@@ -1,13 +1,13 @@
 "use client";
-import appwriteService from "@/appwrite/config";
 import CustomInput from "@/components/CustomInput";
 import LetterAnimation from "@/components/LetterAnimation";
 import AnimatedText from "@/components/text";
-import { checkCorrect } from "@/utils/checkCorrect";
 import React, { useState } from "react";
+import { checkCorrect } from "@/utils/checkCorrect";
+import appwriteService from "@/appwrite/config";
 
 const Page = () => {
-  const questionId = "q1";
+  const questionId = "q5";
   const [input, setInput] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,13 +38,13 @@ const Page = () => {
       </div>
       <div>
         <LetterAnimation>
-          Deserts, Dynasties, Power and Prophecy- the second act unfolded in
-          2024. In this tale where sands hold secrets and the future whispers in
-          fragments, a pivotal moment folds back upon itself. Hidden under the
-          sand, an important date (ddmmyy) murmurs its truth in reverse. But
-          only when seen through the lens of a dual world can its essence be
-          fully grasped- think in terms of light and shadow, presence and
-          absence.
+          Claws clash with chaos as two legends collide. One heals fast, the
+          other talks faster. Follow the mayhem to where Marvel first unveils
+          this war—watch closely for the moment a weapon grins back. A mind in
+          chaos, new emotions take control. Watch where Pixar opens the door.
+          Let time guide you to this world where emotions stir. Pause at the
+          same mark when the fiery fear had let out a familiar grin. And there
+          you will find a single phrase that awaits being found.
         </LetterAnimation>
       </div>
       <div>

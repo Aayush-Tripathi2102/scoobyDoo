@@ -1,13 +1,13 @@
 "use client";
-import appwriteService from "@/appwrite/config";
 import CustomInput from "@/components/CustomInput";
 import LetterAnimation from "@/components/LetterAnimation";
 import AnimatedText from "@/components/text";
-import { checkCorrect } from "@/utils/checkCorrect";
 import React, { useState } from "react";
+import { checkCorrect } from "@/utils/checkCorrect";
+import appwriteService from "@/appwrite/config";
 
 const Page = () => {
-  const questionId = "q1";
+  const questionId = "q2";
   const [input, setInput] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,13 +38,10 @@ const Page = () => {
       </div>
       <div>
         <LetterAnimation>
-          Deserts, Dynasties, Power and Prophecy- the second act unfolded in
-          2024. In this tale where sands hold secrets and the future whispers in
-          fragments, a pivotal moment folds back upon itself. Hidden under the
-          sand, an important date (ddmmyy) murmurs its truth in reverse. But
-          only when seen through the lens of a dual world can its essence be
-          fully grasped- think in terms of light and shadow, presence and
-          absence.
+          Let those sands of destiny now lead you into a new world- a world that
+          features tennis courts of rivalry. One popular name unites both tales.
+          Seek the link that binds the desert to the game, and you’ll find the
+          final name.
         </LetterAnimation>
       </div>
       <div>

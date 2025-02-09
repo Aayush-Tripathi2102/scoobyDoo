@@ -1,19 +1,18 @@
 "use client";
-import appwriteService from "@/appwrite/config";
 import CustomInput from "@/components/CustomInput";
 import LetterAnimation from "@/components/LetterAnimation";
 import AnimatedText from "@/components/text";
-import { checkCorrect } from "@/utils/checkCorrect";
 import React, { useState } from "react";
+import { checkCorrect } from "@/utils/checkCorrect";
+import appwriteService from "@/appwrite/config";
 
 const Page = () => {
-  const questionId = "q1";
+  const questionId = "q6";
   const [input, setInput] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log(input);
@@ -38,13 +37,11 @@ const Page = () => {
       </div>
       <div>
         <LetterAnimation>
-          Deserts, Dynasties, Power and Prophecy- the second act unfolded in
-          2024. In this tale where sands hold secrets and the future whispers in
-          fragments, a pivotal moment folds back upon itself. Hidden under the
-          sand, an important date (ddmmyy) murmurs its truth in reverse. But
-          only when seen through the lens of a dual world can its essence be
-          fully grasped- think in terms of light and shadow, presence and
-          absence.
+          Start your quest where the pixels meet—the Instagram page holds the
+          first key! Follow the trail of moments captured, where words hold more
+          than they seem. Legends were made where these numbers point. Find the
+          ground, recall the glory—history holds your next clue. Numbers lead
+          the way, and with it, the date (ddmmyy) seals your fate.
         </LetterAnimation>
       </div>
       <div>
