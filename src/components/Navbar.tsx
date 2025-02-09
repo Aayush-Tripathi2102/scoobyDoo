@@ -26,6 +26,11 @@ const Navbar = () => {
     setIsLogIn(false)
   }
 
+  const handleLeader = () => {
+    router.push('/leader-board')
+  }
+  
+
   return (
     <div className='flex justify-between px-10 py-5 items-center'>
       <div className="logo flex items-center">
@@ -33,9 +38,17 @@ const Navbar = () => {
       </div>
       <div className="sign">
         {isLogIn ? (
+          <>
+          <div className="flex gap-2 items-center justify-center">
+          <button onClick={handleLeader}>
+            <AnimatedText text="Leader Board" className = 'bg-[#11f800] hover:bg-[#3ade2e] transition-all text-black text-xl px-5 py-3' preStyle='bg-[#11f800] hover:bg-[#3ade2e] transition-all text-black text-xl px-5 py-3'/>
+          </button>
           <button onClick={handleLogout} className="bg-red-500 hover:bg-red-700 text-white text-xl px-5 py-3">
             Logout
           </button>
+          </div>
+          
+          </>
         ) : (
           <button onClick={handleClick}>
             <AnimatedText text="Sign in" className = 'bg-[#11f800] hover:bg-[#3ade2e] transition-all text-black text-xl px-5 py-3' preStyle='bg-[#11f800] hover:bg-[#3ade2e] transition-all text-black text-xl px-5 py-3'/>

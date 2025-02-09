@@ -9,6 +9,9 @@ import appwriteService from "@/appwrite/config";
 const Page = () => {
   const questionId = "q2";
   const [input, setInput] = useState("");
+  const [correct, setCorrect] = useState(false)
+
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -17,6 +20,13 @@ const Page = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log(input);
+
+    if(input === "ZENDAYA"){
+      setCorrect(true);
+    }
+    else{
+      setCorrect(false)
+    }
 
     const isCorrect = checkCorrect({ questionId, userAnswer: input });
     if (isCorrect) {
@@ -34,7 +44,7 @@ const Page = () => {
     <div>
       <div className="ml-24 mt-10 flex gap-2 text-2xl">
         [
-        <AnimatedText text="0x01" preStyle="" />]
+        <AnimatedText text="0x02" preStyle="" />]
       </div>
       <div>
         <LetterAnimation>
@@ -62,6 +72,9 @@ const Page = () => {
               preStyle="bg-[#11f800] transition-all text-black  text-xl px-5 py-5"
             />
           </button>
+          {correct ? (
+            <p>Correct Answer</p>
+          ):<>{correct}</>}
         </form>
       </div>
     </div>

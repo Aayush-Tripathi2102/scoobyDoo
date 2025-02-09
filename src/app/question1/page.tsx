@@ -9,6 +9,7 @@ import React, { useState } from "react";
 const Page = () => {
   const questionId = "q1";
   const [input, setInput] = useState("");
+  const [correct, setCorrect] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -16,18 +17,16 @@ const Page = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(input);
 
     const isCorrect = checkCorrect({ questionId, userAnswer: input });
-    if (isCorrect) {
-      const user = await appwriteService.getCurrentUser();
-      if (!user) {
-        console.log("answer correct, user not found");
-      }
-      await appwriteService.updateUserProgress(user!.$id, questionId, 100);
-    } else {
-      console.log("incorrect, try again");
+
+    if(input === "1100111010001100010"){
+      setCorrect(true);
     }
+    else{
+      setCorrect(false)
+    }
+
   };
 
   return (
@@ -65,6 +64,9 @@ const Page = () => {
               preStyle="bg-[#11f800] transition-all text-black  text-xl px-5 py-5"
             />
           </button>
+          {correct ? (
+            <p>Correct Answer</p>
+          ):<>{correct}</>}
         </form>
       </div>
     </div>
