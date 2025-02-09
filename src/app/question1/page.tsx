@@ -25,6 +25,7 @@ const Page = () => {
         console.log("answer correct, user not found");
       }
       await appwriteService.updateUserProgress(user!.$id, questionId, 100);
+      console.log("solved");
     } else {
       console.log("incorrect, try again");
     }
