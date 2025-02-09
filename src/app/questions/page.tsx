@@ -2,7 +2,7 @@ import AnimatedText from '@/components/text'
 import Link from 'next/link'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div className='m-10 mt-5'>
         <h1>
@@ -42,4 +42,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
