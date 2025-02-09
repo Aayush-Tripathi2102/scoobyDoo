@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import { account } from '@/appwrite/config';
 import { useRouter } from 'next/navigation';
 
-const page = () => {
+const Page = () => {
     const router = useRouter()
     const [inputName, setInputName] = useState('')
     const [email, setEmail] = useState('')
@@ -52,4 +52,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
